@@ -1,7 +1,11 @@
 package team.abc.tonguetwisterserver.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "t_ip")
 public class IP {
 
     @Id

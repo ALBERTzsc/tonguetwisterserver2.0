@@ -1,11 +1,17 @@
 package team.abc.tonguetwisterserver.entity;
 
 
-import javax.persistence.Id;
+import org.hibernate.annotations.GeneratorType;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "t_user_info")
 public class UserInfo {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     private String userName;
     private int userGender;
